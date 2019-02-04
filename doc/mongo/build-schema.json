@@ -1,0 +1,52 @@
+{
+    "$id": "CI-build",
+    "type": "object",
+    "properties": {
+	"_id": { 
+	    "$id": "/properties/_id",
+	    "type": "string",
+	    "description": "MongoDB UUID of the record",
+	    "default": "",
+	    "examples": [
+		"123e4567-e89b-12d3-a456-426655440000"
+	    ]
+	},
+	"buildID": {
+	    "$id": "/properties/buildId",
+	    "type": "integer",
+	    "description": "CI ID of the build",
+	    "default": 0,
+	    "examples": [
+		12419287
+	    ]
+	},
+	"dateReceivedBuild": {
+	    "$id": "/properties/dateReceivedBuild",
+	    "type": "string",
+	    "description": "ISODate of when the build entered the queue",
+	    "default": "",
+	    "examples": [
+		"2018-07-31T09:46:56.568+0000"		
+	    ]
+	},
+	"dateFinishedBuild": {
+	    "$id": "/properties/dateFinishedBuild",
+	    "type": "string",
+	    "description": "ISODate of when the build finished",
+	    "default": "",
+	    "examples": [
+		"2018-07-31T09:46:56.568+0000"
+	    ]
+	},
+	"status": {
+	    "$id": "/properties/status",
+	    "type": "string",
+	    "description": "Status of the build, did it fail or complete",
+	    "default": "",
+	    "examples": [
+		"PASSED",
+		"FAILED"
+	    ]
+	}
+    }
+}
