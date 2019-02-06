@@ -1,6 +1,5 @@
 import unittest
-import main
-from src import history
+from main.history import History
 import datetime
 
 class test_history(unittest.TestCase):
@@ -9,14 +8,14 @@ class test_history(unittest.TestCase):
     Serialize creates a dictionary based on its input. This test that 
     the dictionary is indeed created correctly.
     """
-    def test_serialize():        
+    def test_serialize(self):        
         build_id = 1
-        temp = datetime.now().isoformat()
-        date_rec = temp - timedelta(days=-1)
+        temp = datetime.datetime.today()
+        date_rec = (temp + datetime.timedelta(days=-1))
         date_end = temp
         status = "PASSED"
         
-        dictionary = history.serialize(build_id,
+        dictionary = History.serialize(build_id,
                                        date_rec.isoformat(),
                                        date_end.isoformat(),
                                        status)
