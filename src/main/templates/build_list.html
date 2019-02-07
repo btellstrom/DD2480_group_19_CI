@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Build details</title>
+</head>
+
+<body>
+
+<ol>
+{% for build in {{ build_list }} %}
+<li><a href="../{{ build['buildID'] }}">Build {{ build['buildID'] }}</a><li>
+{% endfor %}
+</ol>
+
+</body>
+</html>
