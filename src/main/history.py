@@ -1,4 +1,4 @@
-import pymongo
+from pymongo import MongoClient
 
 """
 A class for storing the history of the CI-server. The history is stored 
@@ -21,12 +21,12 @@ class History:
                  mongo_pass):
 
         self.mongo_client = MongoClient(
-            'mongodb://%s:%s@%s:%d' % (mongo_user,
+            'mongodb://%s:%s@%s:%s' % (mongo_user,
                                        mongo_pass,
                                        mongo_ip,
                                        mongo_port))
         
-        self.db = mongo_client[mongo_name]
+        self.db = self.mongo_client[mongo_name]
         
     """
     Inserts a document into the history
