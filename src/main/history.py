@@ -38,6 +38,15 @@ class History:
         builds.insert_one(document)
 
     """
+    Fetch a specific document in the history. 
+    Returns None if the ID is not valid.
+    
+    + build_id - The identifier of the document.
+    """
+    def fetch(build_id):
+        return db.builds.find_one({"buildID": build_id})
+
+    """
     Fetch a number of the latest documents to be added to the history
     
     + n - The number of documents to fetch
