@@ -13,6 +13,16 @@ def hello():
     data = request.get_json(silent=True)# Load JSON data sent with POST request
     return render_template('index.html', data=data)
 
+"""
+Informations on a build can be accessed using the commit ID in the URL.
+
+:build_id: A unique identifier for the build
+"""    
+@app.route("/<build_id>")
+def commit_details(build_id):
+    build = history.fetch(build_id)
+    return render_template('build.html', build=build)
+    
 
 def main():
     global history
