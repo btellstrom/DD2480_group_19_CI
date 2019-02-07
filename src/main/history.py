@@ -52,7 +52,7 @@ class History:
     + n - The number of documents to fetch
     """
     def fetch_n_last(n):
-        documents = db.builds.find().skip(db.builds.count() - n)
+        return db.builds.find().skip(db.builds.count() - n)
 
     """
     Static method to create a document that can be inserted into the 
