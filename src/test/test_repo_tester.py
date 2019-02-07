@@ -14,7 +14,7 @@ class test_repo_tester(unittest.TestCase):
         with open('test/json_pull_request_example.txt', 'r') as payloadfile:         
             payload = payloadfile.read()                                        
             self.assertTrue(repo_test(payload) == 10)                           
-                                                                                
+
 if __name__ == '__main__':                                                      
     unittest.main()                                                             
                                                                                 
