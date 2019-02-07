@@ -5,7 +5,7 @@ import subprocess
 Clones repo, runs all tests as specified in ci.sh.                              
                                                                                 
 Input:                                                                          
-    json_str - json formatted string of the push event payload                  
+    json_str - json formatted string of the pull request event payload                  
                                                                                 
 Output:                                                                         
     0 if all tests succeeded                                                    
