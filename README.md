@@ -18,7 +18,7 @@ Compilation is triggered as webhook, the CI server compiles the branch where the
 ## Running it
 To run app:
 ```Python
-$ python3 app.py
+$ python3 src/main/app.py
 ```
 
 To run tests:
