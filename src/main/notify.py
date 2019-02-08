@@ -4,15 +4,18 @@ import json
 
 """
 update_status sends a POST request to the GitHub API to update the commit status.
-:param commit_url: The url should be retrieved from PR data['pull_request']['statuses_url']
+:param json_payload: The JSON data coming from the push
 :param status: The status of the commit can be 'pending', 'success' or 'failure'.
 :param auth_token: The access token must be included to authenticate to GitHub
-:return: Returns the POST request if the input is valid  
+:return: Returns the POST request if the input is valid 
 
 """
-def update_status(commit_url, status, auth_token):
-	# post_url stores the correct form of the url to be used in the POST request 
-	post_url = commit_url[:8] + auth_token + ':x-oauth-basic@' + commit_url[8:]
+def update_status(json_payload, status, auth_token):
+	sha = json_payload['head_commit']['id'] 
+	status_url = json_payload["repository"]['statuses_url'] # gets url of form https://.../{sha}
+	status_url_sha = status_url.replace('{sha}',sha) # replaces '{sha}' in status_url with actual sha
+	#post_url stores the correct form of the url to be used in the POST request 
+	post_url = status_url_sha[:8] + auth_token + ':x-oauth-basic@' + status_url_sha[8:]
 	
 	try:
 		if status == 'pending':
@@ -32,4 +35,7 @@ def update_status(commit_url, status, auth_token):
 
 	
 	except Exception:
-		print('invalid input for status')
+		return None
+		
+
+
