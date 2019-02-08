@@ -1,7 +1,9 @@
 from flask import Flask, request ,render_template
-from main.history import History
+import sys
+sys.path.append('./')
+from src.main.history import History
 from os.path import abspath
-from main import config
+from src.main import config
 app = Flask(__name__)
 
 # Database of builds
