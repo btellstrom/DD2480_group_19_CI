@@ -24,6 +24,7 @@ def hello():
     update_status(data, 'pending', config.api_token)
     exit_code = repo_test(data)
     status = 'success' if exit_code == 0 else 'failure'
+    print(status)
     update_status(data, status, config.api_token)
     db_entry = {'buildID':1324, 'dateReceivedBuild':data["commits"]["timestamp"], 
             'dateFinishedBuild':datetime.datetime.now(), 'status':status}
