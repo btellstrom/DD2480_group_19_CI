@@ -18,7 +18,7 @@ def home():
 
 @app.route("/", methods = ['POST'])
 def hello():
-    if not request.is_json():
+    if not request.is_json:
         return render_template('index.html')
     data = request.get_json()# Load JSON data sent with POST request
     update_status(data, 'pending', config.api_token)
