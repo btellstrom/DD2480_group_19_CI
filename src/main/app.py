@@ -5,15 +5,17 @@ sys.path.append('./')
 from src.main.history import History
 from os.path import abspath
 from src.main import config
-from src.main import repo_tester
-from src.main import notify
+from src.main.repo_tester import *
+from src.main.notify import *
 app = Flask(__name__)
 
 # Database of builds
 history = None
 
-@app.route("/", methods = ['GET','POST'])
+@app.route("/", methods = ['POST'])
 def hello():
+    if not request.is_json():
+        return render_template('index.html')
     data = request.get_json()# Load JSON data sent with POST request
     update_status(data, 'pending', config.api_token)
     exit_code = repo_test(data)
