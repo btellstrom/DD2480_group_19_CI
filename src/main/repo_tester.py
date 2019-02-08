@@ -5,20 +5,19 @@ import subprocess
 Clones repo, runs all tests as specified in ci.sh.                              
                                                                                 
 Input:                                                                          
-    json_str - json formatted string of the pull request event payload                  
+    json_payload - parsed json payload                 
                                                                                 
 Output:                                                                         
     0 if all tests succeeded                                                    
     1 if compilation/static syntax check succeeds but tests fail                
     2 if compilation/static syntax check fails                                  
 """                                                                             
-def repo_test(json_str):                                                        
+def repo_test(json_payload):                                                        
     # get important stuff                                                       
-    payload = json.loads(json_str)                                              
-    branch_name = payload["pull_request"]["head"]["ref"]                        
-    ssh_url = payload["pull_request"]["head"]["repo"]["ssh_url"]                
-    clone_url = payload["pull_request"]["head"]["repo"]["clone_url"]            
-    repo_name = payload["pull_request"]["head"]["repo"]["name"]                 
+    branch_name = json_payload["ref"].split('/')[-1]
+    ssh_url = json_payload["repository"]["ssh_url"]
+    clone_url = json_payload["repository"]["clone_url"]
+    repo_name = json_payload["repository"]["name"]
                                                                                 
     # clone repo, switch branch, run ci.sh, remove repo                         
     subprocess.run(["git", "clone", clone_url])                                 

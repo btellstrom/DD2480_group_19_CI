@@ -1,0 +1,183 @@
+{
+  "ref": "refs/heads/demobranch2",
+  "before": "0000000000000000000000000000000000000000",
+  "after": "5880e5819d8ac89f37b5eb36b39144902ac1975e",
+  "created": true,
+  "deleted": false,
+  "forced": false,
+  "base_ref": null,
+  "compare": "https://github.com/henrikglass/demo_repo/commit/5880e5819d8a",
+  "commits": [
+    {
+      "id": "5880e5819d8ac89f37b5eb36b39144902ac1975e",
+      "tree_id": "e7be8c37d0a90e86b98319e62f4294fb23b578f8",
+      "distinct": true,
+      "message": "ok",
+      "timestamp": "2019-02-08T00:28:31+01:00",
+      "url": "https://github.com/henrikglass/demo_repo/commit/5880e5819d8ac89f37b5eb36b39144902ac1975e",
+      "author": {
+        "name": "Henrik",
+        "email": "hglass@kth.se"
+      },
+      "committer": {
+        "name": "Henrik",
+        "email": "hglass@kth.se"
+      },
+      "added": [
+        "ci.sh"
+      ],
+      "removed": [
+
+      ],
+      "modified": [
+
+      ]
+    }
+  ],
+  "head_commit": {
+    "id": "5880e5819d8ac89f37b5eb36b39144902ac1975e",
+    "tree_id": "e7be8c37d0a90e86b98319e62f4294fb23b578f8",
+    "distinct": true,
+    "message": "ok",
+    "timestamp": "2019-02-08T00:28:31+01:00",
+    "url": "https://github.com/henrikglass/demo_repo/commit/5880e5819d8ac89f37b5eb36b39144902ac1975e",
+    "author": {
+      "name": "Henrik",
+      "email": "hglass@kth.se"
+    },
+    "committer": {
+      "name": "Henrik",
+      "email": "hglass@kth.se"
+    },
+    "added": [
+      "ci.sh"
+    ],
+    "removed": [
+
+    ],
+    "modified": [
+
+    ]
+  },
+  "repository": {
+    "id": 169496475,
+    "node_id": "MDEwOlJlcG9zaXRvcnkxNjk0OTY0NzU=",
+    "name": "demo_repo",
+    "full_name": "henrikglass/demo_repo",
+    "private": false,
+    "owner": {
+      "name": "henrikglass",
+      "email": "henrik.asson@gmail.com",
+      "login": "henrikglass",
+      "id": 26636333,
+      "node_id": "MDQ6VXNlcjI2NjM2MzMz",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/26636333?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/henrikglass",
+      "html_url": "https://github.com/henrikglass",
+      "followers_url": "https://api.github.com/users/henrikglass/followers",
+      "following_url": "https://api.github.com/users/henrikglass/following{/other_user}",
+      "gists_url": "https://api.github.com/users/henrikglass/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/henrikglass/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/henrikglass/subscriptions",
+      "organizations_url": "https://api.github.com/users/henrikglass/orgs",
+      "repos_url": "https://api.github.com/users/henrikglass/repos",
+      "events_url": "https://api.github.com/users/henrikglass/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/henrikglass/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "html_url": "https://github.com/henrikglass/demo_repo",
+    "description": null,
+    "fork": false,
+    "url": "https://github.com/henrikglass/demo_repo",
+    "forks_url": "https://api.github.com/repos/henrikglass/demo_repo/forks",
+    "keys_url": "https://api.github.com/repos/henrikglass/demo_repo/keys{/key_id}",
+    "collaborators_url": "https://api.github.com/repos/henrikglass/demo_repo/collaborators{/collaborator}",
+    "teams_url": "https://api.github.com/repos/henrikglass/demo_repo/teams",
+    "hooks_url": "https://api.github.com/repos/henrikglass/demo_repo/hooks",
+    "issue_events_url": "https://api.github.com/repos/henrikglass/demo_repo/issues/events{/number}",
+    "events_url": "https://api.github.com/repos/henrikglass/demo_repo/events",
+    "assignees_url": "https://api.github.com/repos/henrikglass/demo_repo/assignees{/user}",
+    "branches_url": "https://api.github.com/repos/henrikglass/demo_repo/branches{/branch}",
+    "tags_url": "https://api.github.com/repos/henrikglass/demo_repo/tags",
+    "blobs_url": "https://api.github.com/repos/henrikglass/demo_repo/git/blobs{/sha}",
+    "git_tags_url": "https://api.github.com/repos/henrikglass/demo_repo/git/tags{/sha}",
+    "git_refs_url": "https://api.github.com/repos/henrikglass/demo_repo/git/refs{/sha}",
+    "trees_url": "https://api.github.com/repos/henrikglass/demo_repo/git/trees{/sha}",
+    "statuses_url": "https://api.github.com/repos/henrikglass/demo_repo/statuses/{sha}",
+    "languages_url": "https://api.github.com/repos/henrikglass/demo_repo/languages",
+    "stargazers_url": "https://api.github.com/repos/henrikglass/demo_repo/stargazers",
+    "contributors_url": "https://api.github.com/repos/henrikglass/demo_repo/contributors",
+    "subscribers_url": "https://api.github.com/repos/henrikglass/demo_repo/subscribers",
+    "subscription_url": "https://api.github.com/repos/henrikglass/demo_repo/subscription",
+    "commits_url": "https://api.github.com/repos/henrikglass/demo_repo/commits{/sha}",
+    "git_commits_url": "https://api.github.com/repos/henrikglass/demo_repo/git/commits{/sha}",
+    "comments_url": "https://api.github.com/repos/henrikglass/demo_repo/comments{/number}",
+    "issue_comment_url": "https://api.github.com/repos/henrikglass/demo_repo/issues/comments{/number}",
+    "contents_url": "https://api.github.com/repos/henrikglass/demo_repo/contents/{+path}",
+    "compare_url": "https://api.github.com/repos/henrikglass/demo_repo/compare/{base}...{head}",
+    "merges_url": "https://api.github.com/repos/henrikglass/demo_repo/merges",
+    "archive_url": "https://api.github.com/repos/henrikglass/demo_repo/{archive_format}{/ref}",
+    "downloads_url": "https://api.github.com/repos/henrikglass/demo_repo/downloads",
+    "issues_url": "https://api.github.com/repos/henrikglass/demo_repo/issues{/number}",
+    "pulls_url": "https://api.github.com/repos/henrikglass/demo_repo/pulls{/number}",
+    "milestones_url": "https://api.github.com/repos/henrikglass/demo_repo/milestones{/number}",
+    "notifications_url": "https://api.github.com/repos/henrikglass/demo_repo/notifications{?since,all,participating}",
+    "labels_url": "https://api.github.com/repos/henrikglass/demo_repo/labels{/name}",
+    "releases_url": "https://api.github.com/repos/henrikglass/demo_repo/releases{/id}",
+    "deployments_url": "https://api.github.com/repos/henrikglass/demo_repo/deployments",
+    "created_at": 1549498091,
+    "updated_at": "2019-02-07T00:08:13Z",
+    "pushed_at": 1549582122,
+    "git_url": "git://github.com/henrikglass/demo_repo.git",
+    "ssh_url": "git@github.com:henrikglass/demo_repo.git",
+    "clone_url": "https://github.com/henrikglass/demo_repo.git",
+    "svn_url": "https://github.com/henrikglass/demo_repo",
+    "homepage": null,
+    "size": 0,
+    "stargazers_count": 0,
+    "watchers_count": 0,
+    "language": null,
+    "has_issues": true,
+    "has_projects": true,
+    "has_downloads": true,
+    "has_wiki": true,
+    "has_pages": false,
+    "forks_count": 0,
+    "mirror_url": null,
+    "archived": false,
+    "open_issues_count": 1,
+    "license": null,
+    "forks": 0,
+    "open_issues": 1,
+    "watchers": 0,
+    "default_branch": "master",
+    "stargazers": 0,
+    "master_branch": "master"
+  },
+  "pusher": {
+    "name": "henrikglass",
+    "email": "henrik.asson@gmail.com"
+  },
+  "sender": {
+    "login": "henrikglass",
+    "id": 26636333,
+    "node_id": "MDQ6VXNlcjI2NjM2MzMz",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/26636333?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/henrikglass",
+    "html_url": "https://github.com/henrikglass",
+    "followers_url": "https://api.github.com/users/henrikglass/followers",
+    "following_url": "https://api.github.com/users/henrikglass/following{/other_user}",
+    "gists_url": "https://api.github.com/users/henrikglass/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/henrikglass/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/henrikglass/subscriptions",
+    "organizations_url": "https://api.github.com/users/henrikglass/orgs",
+    "repos_url": "https://api.github.com/users/henrikglass/repos",
+    "events_url": "https://api.github.com/users/henrikglass/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/henrikglass/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

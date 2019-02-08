@@ -10,7 +10,7 @@ history = None
 @app.route("/", methods = ['GET','POST'])
 def hello():
 
-    data = request.get_json(silent=True)# Load JSON data sent with POST request
+    data = request.get_json()# Load JSON data sent with POST request
     return render_template('index.html', data=data)
 
 """
