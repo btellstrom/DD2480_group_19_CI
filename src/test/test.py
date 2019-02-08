@@ -1,5 +1,7 @@
 import unittest
 from os.path import abspath
+import sys
+sys.path.append('../')
 import main.app
 
 class test(unittest.TestCase):
