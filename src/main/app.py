@@ -12,6 +12,10 @@ app = Flask(__name__)
 # Database of builds
 history = None
 
+@app.route("/home", methods = ['GET'])
+def home():
+    return render_template('index.html')
+
 @app.route("/", methods = ['POST'])
 def hello():
     if not request.is_json():
@@ -51,5 +55,5 @@ def main():
     history = History(config.mongo_database_name, config.mongo_ip, config.mongo_port, config.mongo_user, config.mongo_pass)
 
 if __name__ == '__main__':
-    main()
+   # main()
     app.run(debug = True, port=8080)
