@@ -1,18 +1,17 @@
 import json
 import subprocess
 
-"""                                                                             
-Clones repo, runs all tests as specified in ci.sh.                              
-                                                                                
-Input:                                                                          
-    json_payload - parsed json payload                 
-                                                                                
-Output:                                                                         
-    0 if all tests succeeded                                                    
-    1 if compilation/static syntax check succeeds but tests fail                
-    2 if compilation/static syntax check fails                                  
-"""                                                                             
 def repo_test(json_payload):                                                        
+    """                                                                             
+    Clones repo, runs all tests as specified in ci.sh.                              
+                                                                            
+    + json_payload - parsed json payload                 
+    
+    + return                                                                         
+        + 0 if all tests succeeded                                                    
+        + 1 if compilation/static syntax check succeeds but tests fail                
+        + 2 if compilation/static syntax check fails                                  
+    """                                                                             
     # get important stuff                                                       
     branch_name = json_payload["ref"].split('/')[-1]
     ssh_url = json_payload["repository"]["ssh_url"]

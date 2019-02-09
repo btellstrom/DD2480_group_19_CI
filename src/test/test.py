@@ -6,11 +6,11 @@ import main.app
 
 class test(unittest.TestCase):
 
-    """
-    Tests that an instance of History is created when launching the app.
-    """
     # <!> Requires that ci.ini is completed. <!>
     #def test_main(self):
+        """
+        Tests that an instance of History is created when launching the app.
+        """
     #    main.app.main()
     #    self.assertFalse(main.app.history == None)
         
