@@ -1,6 +1,6 @@
 import unittest
 import json
-from main.repo_tester import *                                                  
+from src.main.repo_tester import *                                                  
                                                                                 
 class test_repo_tester(unittest.TestCase):                                      
                                                                                 

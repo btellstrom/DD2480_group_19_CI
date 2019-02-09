@@ -1,5 +1,5 @@
 import unittest
-from main import config
+from src.main import config
 from os.path import abspath
 
 class test_config(unittest.TestCase):

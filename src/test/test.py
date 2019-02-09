@@ -2,7 +2,7 @@ import unittest
 from os.path import abspath
 import sys
 sys.path.append('../')
-import main.app
+import src.main.app
 
 class test(unittest.TestCase):
 

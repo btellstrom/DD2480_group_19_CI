@@ -1,5 +1,5 @@
 import unittest
-from main.notify import update_status
+from src.main.notify import update_status
 import json
 
 
