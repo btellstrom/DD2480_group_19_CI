@@ -1,14 +1,14 @@
 import unittest
-from main import config
+from src.main import config
 from os.path import abspath
 
 class test_config(unittest.TestCase):
 
-    """
-    Test so that all variables are initialised properly 
-    from the config-file
-    """
     def test_init_with_file(self):
+        """
+        Test so that all variables are initialised properly 
+        from the config-file
+        """
         temp = abspath('test/config_example.ini')
         config.init(temp)
 

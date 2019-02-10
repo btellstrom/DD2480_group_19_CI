@@ -1,14 +1,14 @@
 import unittest
-from main.history import History
+from src.main.history import History
 import datetime
 
 class test_history(unittest.TestCase):
 
-    """
-    Serialize creates a dictionary based on its input. This test that 
-    the dictionary is indeed created correctly.
-    """
     def test_serialize(self):        
+        """
+        Serialize creates a dictionary based on its input. This test that 
+        the dictionary is indeed created correctly.
+        """
         build_id = 1
         temp = datetime.datetime.today()
         date_rec = (temp + datetime.timedelta(days=-1))
