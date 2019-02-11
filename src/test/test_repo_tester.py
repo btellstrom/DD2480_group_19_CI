@@ -44,14 +44,11 @@ class test_repo_tester(unittest.TestCase):
     exitcode 0 (everything succeeded). repo_test should also return 0.
     """
     def test_valid1(self):                                                           
-        with open('test/json_push_valid1.txt', 'r') as payloadfile:         
+        with open('test/json_push_valid1.txt', 'r') as payloadfile:              
             payload = payloadfile.read()                                        
             self.assertTrue(repo_test(json.loads(payload)) == 0)                           
         # Check that demo_repo is removed.
         self.assertTrue(subprocess.run(["test", "-d", "demo_repo"]).returncode == 1)
-    
-
-
 
 if __name__ == '__main__':                                                      
     unittest.main()                                                             
