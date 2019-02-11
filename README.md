@@ -86,7 +86,7 @@ mongodb. Again, as shown in the example above.
 
 
 ## Running Godly Robot
-To start Godly Robot, run:
+To start Godly Robot, in the root folder run:
 ```Python
 $ python3 src/main/app.py
 ```
@@ -99,8 +99,8 @@ $ python3 -m unittest discover src/test/
 ## Authons & Statement of contributions
 The code architecture was a remarkable collaborative effort, of which we are proud.
 
-**Benjamin Tellstrom** - config parser, history with mongoDB, setting up an actual machine for the ci service.  
-**Henrik Glass** - repotester, ci.sh
-**Florian Singer** - Front end for build history, browsable documentation
-**Ali Yassiry** - app.py skeleton, notifications.
-**Peter Mastnak** - readme, html template
+**Benjamin Tellstrom** - config parser, history with mongoDB, setting up an actual machine for the ci service  
+**Henrik Glass** - repotester, ci.sh  
+**Florian Singer** - Front end for build history, browsable documentation  
+**Ali Yassiry** - app.py skeleton, notifications  
+**Peter Mastnak** - readme, html template  
