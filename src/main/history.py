@@ -28,7 +28,7 @@ class History:
         
         self.db = self.mongo_client[mongo_name]
         
-    def insert(document):
+    def insert(self, document):
         """
         Inserts a document into the history
         
@@ -37,7 +37,7 @@ class History:
         builds = db.builds
         builds.insert_one(document)
 
-    def fetch(build_id):
+    def fetch(self, build_id):
         """
         Fetch a specific document in the history. 
         Returns None if the ID is not valid.
@@ -46,7 +46,7 @@ class History:
         """
         return db.builds.find_one({"buildID": build_id})
 
-    def fetch_n_last(n):
+    def fetch_n_last(self, n):
         """
         Fetch a number of the latest documents to be added to the history
         
