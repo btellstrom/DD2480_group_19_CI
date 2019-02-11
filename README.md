@@ -49,7 +49,7 @@ fi
 
 # everything is fine
 exit 0
-``
+```
 
 A minimal ci.ini should specify a github API token. A ci.ini complete with history should also
 specify a mongoDB database, as in the example below:
