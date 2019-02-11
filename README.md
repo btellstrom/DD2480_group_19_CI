@@ -9,20 +9,13 @@ In this assignment we implemented our own CI server, "Godly robot".
 - [Python standard library (3.7.2)](https://docs.python.org/3/library/) - collections, math, numpy.
 - Pymongo
 - Flask
+- Pdoc3 (for generating browsable docs)
 
 ## What it is
 It's an implementation of a CI server using python
 
 ## What it does
 Compilation is triggered as webhook, the CI server compiles the branch where the change has been made, as specified in the HTTP payload. Our CI server also supports notification of CI results.
-
-## Prerequisites
-the following are needed for Godly Robot to run:
-
-* python 3.6
-* flask
-* pdoc3 (for browsable documentation)
-* pymongo
 
 ## How to use
 To enable notification of push events to Godly Robot, in your Github repository settings enable
