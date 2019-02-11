@@ -1,3 +1,5 @@
+GODLY ROBOT IS TESTING
+
 ## Assignment 2 of the DD2480 course
 In this assignment we implemented our own CI server.
 
