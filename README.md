@@ -1,4 +1,4 @@
-GODLY ROBOT IS TESTING
+GODLY ROBOT IS TESTING. IT NOW HAS A WORKING NGROK SESSION. ALL HAIL OUR ROBOT OVERLORDS.
 
 ## Assignment 2 of the DD2480 course
 In this assignment we implemented our own CI server.
