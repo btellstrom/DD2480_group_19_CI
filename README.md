@@ -6,7 +6,7 @@ In this assignment we implemented our own CI server, "Godly robot".
 - Python3
 
 <b>Libraries used:</b>
-- [Python standard library (3.7.2)](https://docs.python.org/3/library/) - collections, math, numpy.
+- [Python standard library (3.7.2)](https://docs.python.org/3/library/)
 - Pymongo
 - Flask
 - Pdoc3 (for generating browsable docs)
