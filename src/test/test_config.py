@@ -9,7 +9,7 @@ class test_config(unittest.TestCase):
         Test so that all variables are initialised properly 
         from the config-file
         """
-        temp = abspath('test/config_example.ini')
+        temp = abspath('src/test/config_example.ini')
         config.init(temp)
 
         # Test the api_token option

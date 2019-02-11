@@ -31,7 +31,7 @@ def init(conf_file = None):
     
     # This is only here for none dev purposes, this should never be used in dev
     if conf_file == None:
-        config.read(abspath("../ci.ini"))
+        config.read(abspath("ci.ini"))
     else:
         config.read(conf_file)
 
