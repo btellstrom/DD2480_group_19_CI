@@ -103,7 +103,11 @@ malformed repos, and that the cloned repo is removed every time. For this, we ha
 example JSON push events for another repo, called `demo_repo`.
 
 ## Unittesting of notifications
-
+The notifications feature is tested in `test_notify.py`. It makes sure that the function `update_status`
+produces a url of the correct format when readin JSON data from a push event. A correct formatted url is one
+that can be used to send a POST request to the GitHub API. We also test that the resulting POST request will
+be invalid if an incorrect token is given or the url is not as defined by the GitHub statuses API, [see this](https://developer.github.com/v3/repos/statuses/). Finally, we make sure that no POST request is sent if the
+status input given to update_status is invalid.
 
 ## Browsable docs
 To generate browsable documentation, simply run:
