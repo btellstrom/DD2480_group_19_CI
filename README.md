@@ -109,6 +109,9 @@ malformed repos, and that the cloned repo is removed every time. For this, we ha
 example JSON push events for another repo, called `demo_repo`.
 
 ## Implementation and unittesting of notifications
+Notifications are sent using the Github API, and the commit associated with the push event is marked
+with a status 'Pending', 'Success' or 'Failure'. This handled by the update_status() function in notify.py
+
 The notifications feature is tested in `test_notify.py`. It makes sure that the function `update_status`
 produces a url of the correct format when readin JSON data from a push event. A correct formatted url is one
 that can be used to send a POST request to the GitHub API. We also test that the resulting POST request will
