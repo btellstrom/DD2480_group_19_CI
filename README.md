@@ -16,6 +16,14 @@ It's an implementation of a CI server using python
 ## What it does
 Compilation is triggered as webhook, the CI server compiles the branch where the change has been made, as specified in the HTTP payload. Our CI server also supports notification of CI results.
 
+## Prerequsites
+the following are needed for Godly Robot to run:
+
+* python 3.6
+* flask
+* pdoc3 (for browsable documentation)
+* pymongo
+
 ## How to use
 To enable notification of push events to Godly Robot, in your Github repository settings enable
 a webhook for push events only with a URL pointing to where you want to host Godly Robot.
@@ -100,6 +108,16 @@ is up to the user to define in their own ci.sh script. We do however test that t
 reponsible for executing ci.sh, namely repo_tester.py, behaves consistently and correctly even for
 malformed repos, and that the cloned repo is removed every time. For this, we have a collection of
 example JSON push events for another repo, called `demo_repo`.
+
+## Browsable docs
+To generate browsable documentation, simply run:
+```
+sh update_doc.sh
+```
+This generates the file:
+```
+doc/src/index.html
+```
 
 ## Authors & Statement of contributions
 The code architecture was a remarkable collaborative effort, of which we are proud.
