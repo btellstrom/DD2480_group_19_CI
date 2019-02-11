@@ -16,7 +16,7 @@ It's an implementation of a CI server using python
 ## What it does
 Compilation is triggered as webhook, the CI server compiles the branch where the change has been made, as specified in the HTTP payload. Our CI server also supports notification of CI results.
 
-## Prerequsites
+## Prerequisites
 the following are needed for Godly Robot to run:
 
 * python 3.6
@@ -108,6 +108,9 @@ is up to the user to define in their own ci.sh script. We do however test that t
 reponsible for executing ci.sh, namely repo_tester.py, behaves consistently and correctly even for
 malformed repos, and that the cloned repo is removed every time. For this, we have a collection of
 example JSON push events for another repo, called `demo_repo`.
+
+## Unittesting of notifications
+
 
 ## Browsable docs
 To generate browsable documentation, simply run:
