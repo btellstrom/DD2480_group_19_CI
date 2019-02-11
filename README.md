@@ -31,7 +31,7 @@ ci.sh should exit with the following exit codes for the following scenarios:
 If ci.sh returns any other exit code Godly Robot will automatically fail the tests. Below is an example
 of a valid ci.sh.
 
-```
+```bash
 static syntax check
 cd DD2480_group_19_CI
 python3 -m py_compile src/main/*.py
@@ -54,8 +54,7 @@ exit 0
 A minimal ci.ini should specify a github API token. A ci.ini complete with history should also
 specify a mongoDB database, as in the example below:
 
-```
-
+```ini
 [Notification]
 # The api-token to be used by the CI-service
 api_token =
