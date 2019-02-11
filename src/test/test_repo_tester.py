@@ -12,7 +12,7 @@ class test_repo_tester(unittest.TestCase):
         the exit code of "ci.sh". for json_pull_request_example.txt
         the exit code should be 10.
         """                                                                         
-        with open('test/json_push_example.txt', 'r') as payloadfile:         
+        with open('src/test/json_push_example.txt', 'r') as payloadfile:         
             payload = payloadfile.read()                                        
             self.assertTrue(repo_test(json.loads(payload)) == 10)                           
 
