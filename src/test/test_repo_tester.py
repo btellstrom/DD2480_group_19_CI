@@ -22,7 +22,6 @@ class test_repo_tester(unittest.TestCase):
     repo_test should return -1.
     """                                                                               
     def test_invalid1(self):
-        subprocess.run(["pwd"])
         with open('src/test/json_push_invalid1.txt', 'r') as payloadfile:         
             payload = payloadfile.read()                                        
             self.assertTrue(repo_test(json.loads(payload)) == -1)
