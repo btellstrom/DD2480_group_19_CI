@@ -95,14 +95,20 @@ To run tests:
 ```Python
 $ python3 -m unittest discover src/test/
 ```
-## Unittesting of compilation/syntax checking and testing
+## Implementation and unittesting of compilation/syntax checking and testing
+Compilation/syntax checking and testing is handled by the repo_tester() function. repo_tester()
+takes a parsed json formatted push event as dictionary and uses the information contained in it
+to 1. clone the repo, 2. switch to the correct branch, 3. execute ci.sh, 4. remove the cloned repo, 
+before finally returning the result of step 3 (0, 1 or 2). If ci.sh is malformed or nonexistant,
+repo_tester() returns -1.
+
 The actual compilation/syntax check and the execution of tests is itself not unittested, as this
 is up to the user to define in their own ci.sh script. We do however test that the part of our code
 reponsible for executing ci.sh, namely repo_tester.py, behaves consistently and correctly even for
 malformed repos, and that the cloned repo is removed every time. For this, we have a collection of
 example JSON push events for another repo, called `demo_repo`.
 
-## Unittesting of notifications
+## Implementation and unittesting of notifications
 The notifications feature is tested in `test_notify.py`. It makes sure that the function `update_status`
 produces a url of the correct format when readin JSON data from a push event. A correct formatted url is one
 that can be used to send a POST request to the GitHub API. We also test that the resulting POST request will
@@ -123,7 +129,7 @@ doc/src/index.html
 The code architecture was a remarkable collaborative effort, of which we are proud.
 
 **Benjamin Tellstrom** - config parser, history with mongoDB, setting up an actual machine for the ci service  
-**Henrik Glass** - repotester, ci.sh, readme
+**Henrik Glass** - repotester, ci.sh, readme  
 **Florian Singer** - Front end for build history, browsable documentation  
 **Ali Yassiry** - app.py skeleton, notifications  
 **Peter Mastnak** - readme, html template  
