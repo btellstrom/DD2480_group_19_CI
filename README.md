@@ -94,12 +94,18 @@ To run tests:
 ```Python
 $ python3 -m unittest discover src/test/
 ```
+## Unittesting of compilation/syntax checking and testing
+The actual compilation/syntax check and the execution of tests is itself not unittested, as this
+is up to the user to define in their own ci.sh script. We do however test that the part of our code
+reponsible for executing ci.sh, namely repo_tester.py, behaves consistently and correctly even for
+malformed repos, and that the cloned repo is removed every time. For this, we have a collection of
+example JSON push events for another repo, called `demo_repo`.
 
-## Authons & Statement of contributions
+## Authors & Statement of contributions
 The code architecture was a remarkable collaborative effort, of which we are proud.
 
 **Benjamin Tellstrom** - config parser, history with mongoDB, setting up an actual machine for the ci service  
-**Henrik Glass** - repotester, ci.sh  
+**Henrik Glass** - repotester, ci.sh, readme
 **Florian Singer** - Front end for build history, browsable documentation  
 **Ali Yassiry** - app.py skeleton, notifications  
 **Peter Mastnak** - readme, html template  
