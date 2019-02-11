@@ -22,7 +22,7 @@ class test_repo_tester(unittest.TestCase):
     repo_test should return -1.
     """                                                                               
     def test_invalid1(self):                                                           
-        with open('test/json_push_invalid1.txt', 'r') as payloadfile:         
+        with open('src/test/json_push_invalid1.txt', 'r') as payloadfile:         
             payload = payloadfile.read()                                        
             self.assertTrue(repo_test(json.loads(payload)) == -1)
         # Check that demo_repo is removed.
@@ -33,7 +33,7 @@ class test_repo_tester(unittest.TestCase):
     malformed or missing, repo_test should return -1.
     """
     def test_invalid2(self):                                                           
-        with open('test/json_push_invalid2.txt', 'r') as payloadfile:         
+        with open('src/test/json_push_invalid2.txt', 'r') as payloadfile:         
             payload = payloadfile.read()                                        
             self.assertTrue(repo_test(json.loads(payload)) == -1)
         # Check that demo_repo is removed.
@@ -44,7 +44,7 @@ class test_repo_tester(unittest.TestCase):
     exitcode 0 (everything succeeded). repo_test should also return 0.
     """
     def test_valid1(self):                                                           
-        with open('test/json_push_valid1.txt', 'r') as payloadfile:              
+        with open('src/test/json_push_valid1.txt', 'r') as payloadfile:              
             payload = payloadfile.read()                                        
             self.assertTrue(repo_test(json.loads(payload)) == 0)                           
         # Check that demo_repo is removed.
