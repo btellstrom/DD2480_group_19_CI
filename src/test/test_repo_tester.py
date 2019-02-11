@@ -21,7 +21,8 @@ class test_repo_tester(unittest.TestCase):
     something other than 0, 1, 2. If ci.sh is malformed or missing,
     repo_test should return -1.
     """                                                                               
-    def test_invalid1(self):                                                           
+    def test_invalid1(self):
+        subprocess.run(["pwd"])
         with open('src/test/json_push_invalid1.txt', 'r') as payloadfile:         
             payload = payloadfile.read()                                        
             self.assertTrue(repo_test(json.loads(payload)) == -1)
