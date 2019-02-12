@@ -1,25 +1,25 @@
 import configparser
 from os.path import abspath
 
-# The github api-token to be used for the CI-service
+"""The github api-token to be used for the CI-service"""
 api_token = ''
 
-# The name of the mongo database
+"""The name of the mongo database"""
 mongo_database_name = ''
-# Ip-address of the mongo database
+"""Ip-address of the mongo database"""
 mongo_ip = ''
-# Port number of the mongo database
+"""Port number of the mongo database"""
 mongo_port = ''
-# The username of the mongo database
+"""The username of the mongo database"""
 mongo_user = ''
-# Password for above user of the mongo database
+"""Password for above user of the mongo database"""
 mongo_pass = ''
 
-"""
-Initialize the configuration and give values to the global variables
-specified above
-"""
 def init(conf_file = None):
+    """
+    Initialize the configuration and give values to the global variables
+    specified above
+    """
     global api_token
     global mongo_database_name
     global mongo_ip
@@ -31,7 +31,7 @@ def init(conf_file = None):
     
     # This is only here for none dev purposes, this should never be used in dev
     if conf_file == None:
-        config.read(abspath("../ci.ini"))
+        config.read(abspath("ci.ini"))
     else:
         config.read(conf_file)
 

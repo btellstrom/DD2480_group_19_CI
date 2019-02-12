@@ -6,6 +6,9 @@ __pycache__/
 # C extensions
 *.so
 
+# vim *.swp
+*.swp
+
 # mac spec files
 .DS_Store
 
