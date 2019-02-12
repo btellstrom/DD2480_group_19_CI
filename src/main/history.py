@@ -34,7 +34,7 @@ class History:
         
         + document - The document to be inserted
         """
-        builds = db.builds
+        builds = db['builds']
         builds.insert_one(document)
 
     def fetch(self, build_id):
@@ -52,7 +52,7 @@ class History:
         
         + n - The number of documents to fetch
         """
-        return db.builds.find().skip(db.builds.count() - n)
+        return db['builds'].find().skip(db['builds'].count() - n)
 
     @staticmethod
     def serialize(build_id, date_rec, date_end, status):
