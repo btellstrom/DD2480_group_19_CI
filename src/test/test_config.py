@@ -42,18 +42,6 @@ class test_config(unittest.TestCase):
             config.mongo_pass == "password"
         )
 
-    def test_init_default(self):
-        config.init()
-
-        # Test that api_token is properly initialised as None
-        self.assertTrue(
-            config.api_token == ''
-        )
-
-        # Test that name is properly initialised
-        self.assertTrue(
-            config.mongo_database_name == "CI-History"
-        )
 
 if __name__ == '__main__':
     unittest.main()
