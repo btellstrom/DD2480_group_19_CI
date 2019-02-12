@@ -35,7 +35,8 @@ def send_request():
     update_status(data, status, config.api_token)
     print(data["commits"][0]["timestamp"])
     db_entry = {'buildID':time.time(), 'dateReceivedBuild':data["commits"][0]["timestamp"], 
-            'dateFinishedBuild':datetime.datetime.now(), 'status':status}
+            'dateFinishedBuild':datetime.datetime.now(), 'status':status, 
+            'commitURL':data["commits"][0]["url"]}
     history.insert(db_entry)
 
     return render_template('index.html', data=data)
