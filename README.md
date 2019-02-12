@@ -97,6 +97,18 @@ To run tests:
 ```Python
 $ python3 -m unittest discover src/test/
 ```
+
+## Viewing the build history
+When accessing the server from a web browser, the homepage is located at :
+`/home`
+The page containing the list of all builds is accessed with :
+`/all`
+To list only the last 10 builds, go to :
+`/builds`
+Each build has its own URL, which gives more details :
+`/<build_id>` (Where <build_id> should be replaced by the build ID)
+
+
 ## Implementation and unittesting of compilation/syntax checking and testing
 Compilation/syntax checking and testing is handled by the repo_tester() function. repo_tester()
 takes a parsed json formatted push event as dictionary and uses the information contained in it
