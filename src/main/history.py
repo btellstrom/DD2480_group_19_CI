@@ -53,7 +53,10 @@ class History:
         
         + n - The number of documents to fetch
         """
-        return self.db['builds'].find().skip(self.db['builds'].count() - n)
+        nr_documents = self.db['builds'].count()
+        if(nr_documents < n):
+            return self.db['builds'].find()
+        return self.db['builds'].find().skip(nr_documents - n)
 
     @staticmethod
     def serialize(build_id, date_rec, date_end, status):
