@@ -1,3 +1,1 @@
-cd src/
-python3 -m unittest discover test/
-cd ..
+python3 -m unittest discover src/test/

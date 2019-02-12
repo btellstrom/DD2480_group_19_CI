@@ -5,3 +5,7 @@ python:
 
 script:
   - "bash run-test.sh"
+
+branches:
+  only:
+  - master
