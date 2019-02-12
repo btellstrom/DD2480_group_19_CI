@@ -21,10 +21,11 @@ class History:
         + mongo_pass - The password to the above user
         """
         self.mongo_client = MongoClient(
-            'mongodb://%s:%s@%s:%s' % (mongo_user,
-                                       mongo_pass,
-                                       mongo_ip,
-                                       mongo_port))
+            'mongodb://%s:%s@%s:%s/%s' % (mongo_user,
+                                          mongo_pass,
+                                          mongo_ip,
+                                          mongo_port,
+                                          mongo_name))
         
         self.db = self.mongo_client[mongo_name]
         
