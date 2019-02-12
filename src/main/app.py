@@ -60,6 +60,15 @@ def build_list():
     build_list = history.fetch_n_last(10)
     return render_template('build_list.html', build_list=build_list)
 
+@app.route("/all")
+def build_all_list():
+    """
+    Lists all past builds with a link to the detailed page of the build.
+    """
+    build_list = history.fetch_all()
+    return render_template('build_list.html', build_list=build_list)
+
+
 def main():
     """
     Configures the API token and the build database.
