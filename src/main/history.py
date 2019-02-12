@@ -45,7 +45,7 @@ class History:
         
         + build_id - The identifier of the document.
         """
-        return self.db.builds.find_one({"buildID": build_id})
+        return self.db['builds'].find_one({"buildID": float(build_id)})
 
     def fetch_n_last(self, n):
         """
