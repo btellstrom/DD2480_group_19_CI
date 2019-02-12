@@ -59,7 +59,7 @@ class History:
         return self.db['builds'].find().skip(nr_documents - n)
 
     @staticmethod
-    def serialize(build_id, date_rec, date_end, status):
+    def serialize(build_id, date_rec, date_end, status, commit_url):
         """
         Static method to create a document that can be inserted into the 
         mongoDB.
@@ -68,11 +68,13 @@ class History:
         + date_rec - The date when CI-server received the build
         + date_end - The date when the CI-server finished the build
         + status - Specifies whether the build failed or passed
+        + commit_url - The url of the commit
         """
         document = {"buildID": build_id,
                     "dateReceivedBuild": date_rec,
                     "dateFinishedBuild": date_end,                    
-                    "status": status}
+                    "status": status,
+                    "commitURL": commit_url}
         
         return document
 
