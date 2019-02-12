@@ -7,6 +7,7 @@ from os.path import abspath
 from src.main import config
 from src.main.repo_tester import *
 from src.main.notify import *
+import time
 
 """ Flask application """
 app = Flask(__name__)
@@ -32,8 +33,10 @@ def send_request():
     exit_code = repo_test(data)
     status = 'success' if exit_code == 0 else 'failure'
     update_status(data, status, config.api_token)
-    db_entry = {'buildID':1324, 'dateReceivedBuild':data["commits"]["timestamp"], 
+    print(data["commits"][0]["timestamp"])
+    db_entry = {'buildID':time.time(), 'dateReceivedBuild':data["commits"][0]["timestamp"], 
             'dateFinishedBuild':datetime.datetime.now(), 'status':status}
+    history.insert(db_entry)
 
     return render_template('index.html', data=data)
 
@@ -66,5 +69,6 @@ def main():
     history = History(config.mongo_database_name, config.mongo_ip, config.mongo_port, config.mongo_user, config.mongo_pass)
 
 if __name__ == '__main__':
-    app.run(debug = True, port=8080)
     main()
+    app.run(debug = True, port=8080)
+
