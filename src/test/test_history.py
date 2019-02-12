@@ -14,11 +14,13 @@ class test_history(unittest.TestCase):
         date_rec = (temp + datetime.timedelta(days=-1))
         date_end = temp
         status = "PASSED"
+        commit_url = "example.com"
         
         dictionary = History.serialize(build_id,
                                        date_rec.isoformat(),
                                        date_end.isoformat(),
-                                       status)
+                                       status,
+                                       commit_url)
         self.assertTrue(dictionary["buildID"] == build_id)
         self.assertTrue(
             dictionary["dateReceivedBuild"] == date_rec.isoformat()
@@ -28,6 +30,9 @@ class test_history(unittest.TestCase):
         )
         self.assertTrue(
             dictionary["status"] == status
+        )
+        self.assertTrue(
+            dictionary["commitURL"] == commit_url
         )
         
 if __name__ == '__main__':
