@@ -35,7 +35,7 @@ class History:
         
         + document - The document to be inserted
         """
-        builds = db['builds']
+        builds = self.db['builds']
         builds.insert_one(document)
 
     def fetch(self, build_id):
@@ -45,7 +45,7 @@ class History:
         
         + build_id - The identifier of the document.
         """
-        return db.builds.find_one({"buildID": build_id})
+        return self.db.builds.find_one({"buildID": build_id})
 
     def fetch_n_last(self, n):
         """
@@ -53,7 +53,7 @@ class History:
         
         + n - The number of documents to fetch
         """
-        return db['builds'].find().skip(db['builds'].count() - n)
+        return self.db['builds'].find().skip(self.db['builds'].count() - n)
 
     @staticmethod
     def serialize(build_id, date_rec, date_end, status):
