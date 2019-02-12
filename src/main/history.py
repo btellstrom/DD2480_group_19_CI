@@ -57,6 +57,13 @@ class History:
         if(nr_documents < n):
             return self.db['builds'].find()
         return self.db['builds'].find().skip(nr_documents - n)
+    
+    def fetch_all(self):
+        """
+        Fetch all of the documents to add to the history
+        """
+
+        return self.db['builds'].find()
 
     @staticmethod
     def serialize(build_id, date_rec, date_end, status):
