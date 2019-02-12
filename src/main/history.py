@@ -53,8 +53,8 @@ class History:
         
         + n - The number of documents to fetch
         """
-	nr_documents = self.db['builds'].count()
-	if(nr_documents < n):
+        nr_documents = self.db['builds'].count()
+        if(nr_documents < n):
             return self.db['builds'].find()
         return self.db['builds'].find().skip(nr_documents - n)
 
