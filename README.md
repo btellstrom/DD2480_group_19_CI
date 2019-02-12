@@ -92,6 +92,14 @@ To start Godly Robot, in the root folder run:
 ```Python
 $ python3 src/main/app.py
 ```
+For it to actuallt do anything however, you need something that
+listens on port `8080` (for example ngrok) for github to send the
+`POST` and then delivers that message to the loopback address
+(127.0.0.1) with port `8080`. To do this with ngrok, simply run the
+below command after starting the app.
+```
+ngrok http 8080
+```
 
 To run tests:
 ```Python
