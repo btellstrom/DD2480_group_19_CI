@@ -19,7 +19,7 @@ class test_config(unittest.TestCase):
 
         # Tests that the database name is properly initialised
         self.assertTrue(
-            config.mongo_database_name == "CI-HistoryWRONG"
+            config.mongo_database_name == "CI-History"
         )
 
         # Test that the ip-address of the database is properly initialised
