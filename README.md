@@ -84,6 +84,8 @@ database name, username and password must then be specified in the
 `ci.ini` file along with the port number and ip-address of the
 mongodb. Again, as shown in the example above.
 
+For information on the schema that the documents in the mongoDB has,
+view the docs.
 
 ## Running Godly Robot
 To start Godly Robot, in the root folder run:
